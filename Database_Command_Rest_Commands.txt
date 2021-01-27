@@ -1,0 +1,47 @@
+Creating Data Base Commands
+create database payroll_db2;
+create user 'payrolluser2'@'%'identified by 'password';
+
+grant all on payroll_db2.* to 'payrolluser2'@'%';
+
+Set User Name And Password
+export PAYROLL_DB2_USERNAME=payrolluser
+export PAYROLL_DB2_PASSWORD=password
+echo $PAYROLL_DB2_USERNAME
+
+
+Curl Commands
+
+curl localhost:8080/employeepayrollservice/ -w "\n"
+
+curl localhost:8080/employeepayrollservice/get/1 -w "\n"
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa","salary":
+2000}' "http://localhost:8080/employeepayrollservice/create" -w "\n"
+
+$ curl -X POST -H "Content-Type:application/json" -d'{"name":"Lisha", "gender":"female", "department":["HR","Sales"],"salary":"7000","startDate":"29 Oct 2019", "note":"All in one", "profilePic":"../assets/profile-images/Ellipse-3.png"}' "http://localhost:8080/employeepayrollservice/create" -w"\n"
+
+{"name":"Lisha", "gender":"female", "department":["HR","Sales"],"salary":"7000","startDate":"29 Oct 2019", "note":"All in one", "profilePic":"../assets/profile-images/Ellipse-3.png"}'
+
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Lisa","salary": 2000}' "http://localhost:8080/employeepayrollservice/update" -w "\n"
+
+
+
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Lisha", "gender":"female", "department":["HR","Sales"],"salary":"7000","startDate":"29 Oct 2019", "note":"All in one", "profilePic":"../assets/profile-images/Ellipse-3.png"}' "http://localhost:8080/employeepayrollservice/update/1" -w "\n"
+
+
+curl -X DELETE -H "Content-Type: application/json" localhost:8080/employeepayrollservice/delete/1 -w "\n"
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Chetan","address":
+"Shree"}' "http://localhost:8080/addressbook/create" -w "\n"
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Chetan","profilePic": "all in one","address":
+"Shree","city": "Bhusawal","state": "Maharastra","zip": 520104, "phone": 9637074619,}' "http://localhost:8080/addressbook/create" -w "\n"
+
+String name, String profilePic, String address, String city, String state, String zip, String phone
+
+curl -X PUT -H "Content-Type: application/json" -d '{"name": "Chetan","address":
+"Shree"}' "http://localhost:8080/addressbook/update" -w "\n"

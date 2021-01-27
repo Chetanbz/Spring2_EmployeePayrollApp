@@ -14,7 +14,7 @@ public class EmployeeappApplication {
         ApplicationContext context = SpringApplication.run(EmployeeappApplication.class, args);
         log.debug("Employee Payroll App Started in {} Environment ",
                 context.getEnvironment().getProperty("environment"));
-        
+
     }
 
 }
