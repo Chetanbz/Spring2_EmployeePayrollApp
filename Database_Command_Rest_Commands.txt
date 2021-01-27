@@ -2,6 +2,12 @@ Creating Data Base Commands
 create database payroll_db2;
 create user 'payrolluser2'@'%'identified by 'password';
 
+check database 
+show databses;
+show tables;
+select * from employee_payroll;
+select * from employee_department;
+
 grant all on payroll_db2.* to 'payrolluser2'@'%';
 
 Set User Name And Password
