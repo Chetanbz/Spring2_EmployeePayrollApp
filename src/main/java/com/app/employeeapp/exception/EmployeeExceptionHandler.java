@@ -1,4 +1,5 @@
 package com.app.employeeapp.exception;
+
 import com.app.employeeapp.dto.ResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,8 @@ public class EmployeeExceptionHandler {
                                        "Should have date in Format in the Format dd MM yyy");
         return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
     }
+
+
 
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

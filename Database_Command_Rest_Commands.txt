@@ -51,3 +51,39 @@ String name, String profilePic, String address, String city, String state, Strin
 
 curl -X PUT -H "Content-Type: application/json" -d '{"name": "Chetan","address":
 "Shree"}' "http://localhost:8080/addressbook/update" -w "\n"
+
+
+Postman Command
+
+http://localhost:8080/employeepayrollservice/
+
+http://localhost:8080/employeepayrollservice/get/2
+
+http://localhost:8080/employeepayrollservice/create
+
+http://localhost:8080/employeepayrollservice/update/1
+
+
+{
+    "message": "Created Employee Payroll Data for: ",
+    "data": {
+        "employeeId": 8,
+        "name": "Lisha",
+        "salary": 20000,
+        "gender": "female",
+        "startDate": "2019-10-10",
+        "note": null,
+        "profilePic": "../assets/profile-images/Ellipse-3.png",
+        "department": null
+    }
+}
+
+{
+        "name": "Lisha",
+        "salary": 20000,
+        "gender": "female",
+        "startDate": "29 Oct 2019",
+        "note": "hello",
+        "profilePic": "../assets/profile-images/Ellipse-3.png",
+        "department": ["HR"]
+}
